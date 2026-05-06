@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | E G Muslim Community Centre</title>
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-cream-50">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-emerald-950 shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gold-500 rounded-full flex items-center justify-center text-white text-2xl">
+                        <i class="fa-solid fa-mosque"></i>
+                    </div>
+                    <span class="text-white font-serif text-xl font-bold tracking-tight">E G Community Centre</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-200 hover:text-gold-400 transition-colors px-1 pt-1 text-sm font-medium">Home</a>
+                    <a href="about.html" class="text-gold-400 border-b-2 border-gold-400 px-1 pt-1 text-sm font-medium">About Us</a>
+                    <a href="services.html" class="text-gray-200 hover:text-gold-400 transition-colors px-1 pt-1 text-sm font-medium">Services</a>
+                    <a href="events.html" class="text-gray-200 hover:text-gold-400 transition-colors px-1 pt-1 text-sm font-medium">Events</a>
+                    <a href="contact.html" class="btn-gold">Contact Us</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-white hover:text-gold-400 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-emerald-950 px-4 pt-2 pb-6 space-y-2 border-t border-emerald-800">
+            <a href="index.html" class="block text-gray-200 hover:text-gold-400 py-2 text-base font-medium">Home</a>
+            <a href="about.html" class="block text-gold-400 py-2 text-base font-medium">About Us</a>
+            <a href="services.html" class="block text-gray-200 hover:text-gold-400 py-2 text-base font-medium">Services</a>
+            <a href="events.html" class="block text-gray-200 hover:text-gold-400 py-2 text-base font-medium">Events</a>
+            <a href="contact.html" class="block text-center btn-gold mt-4">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-20 bg-emerald-900 relative overflow-hidden text-center">
+        <!-- Ken Burns Header -->
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1551041777-ed938559104c?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center animate-ken-burns opacity-30"></div>
+        <div class="absolute inset-0 bg-emerald-900/60"></div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">About Our Centre</h1>
+            <div class="w-24 h-1 bg-gold-400 mx-auto rounded-full"></div>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="py-24 px-4">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="reveal">
+                <span class="text-gold-500 font-bold uppercase tracking-widest text-sm">Our Legacy</span>
+                <h2 class="text-4xl font-bold text-emerald-950 mt-2 mb-6 font-serif">A Foundation Built on Faith</h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Established in 1998, the E G Muslim Community Centre began as a small gathering place for local families. Today, it stands as a beacon of Islamic values and community service, welcoming hundreds of worshippers every day.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    Our mission is to foster a vibrant community that adheres to the teachings of the Quran and the Sunnah of Prophet Muhammad (PBUH), promoting peace, education, and social justice.
+                </p>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="p-6 bg-white rounded-xl shadow-sm border-l-4 border-gold-500">
+                        <span class="text-3xl font-bold text-emerald-900 block">25+</span>
+                        <span class="text-sm text-gray-500 uppercase tracking-wider">Years of Service</span>
+                    </div>
+                    <div class="p-6 bg-white rounded-xl shadow-sm border-l-4 border-emerald-800">
+                        <span class="text-3xl font-bold text-emerald-900 block">1,000+</span>
+                        <span class="text-sm text-gray-500 uppercase tracking-wider">Community Members</span>
+                    </div>
+                    <div class="p-6 bg-white rounded-xl shadow-sm border-l-4 border-emerald-800">
+                        <span class="text-3xl font-bold text-emerald-900 block">5</span>
+                        <span class="text-sm text-gray-500 uppercase tracking-wider">Daily Prayers</span>
+                    </div>
+                    <div class="p-6 bg-white rounded-xl shadow-sm border-l-4 border-gold-500">
+                        <span class="text-3xl font-bold text-emerald-900 block">15+</span>
+                        <span class="text-sm text-gray-500 uppercase tracking-wider">Weekly Classes</span>
+                    </div>
+                </div>
+            </div>
+            <div class="relative reveal max-w-md mx-auto">
+                <div class="aspect-[4/5] bg-gold-400 rounded-3xl absolute -top-4 -right-4 w-full h-full -z-10 opacity-20 animate-float"></div>
+                <img src="https://images.unsplash.com/photo-1574246604907-db69e30ddb97?auto=format&fit=crop&q=80&w=1000" alt="People Praying" class="rounded-3xl shadow-2xl w-full h-full object-cover border-8 border-white">
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section class="py-24 px-4 bg-emerald-50">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
+            <div class="bg-white p-10 rounded-2xl shadow-sm reveal">
+                <h3 class="text-2xl font-bold text-emerald-900 mb-4">Our Vision</h3>
+                <p class="text-gray-600 leading-relaxed">To be a model Islamic community centre that inspires spiritual growth and serves as a bridge for intercultural understanding.</p>
+            </div>
+            <div class="bg-white p-10 rounded-2xl shadow-sm reveal" style="transition-delay: 200ms;">
+                <h3 class="text-2xl font-bold text-emerald-900 mb-4">Our Mission</h3>
+                <p class="text-gray-600 leading-relaxed">Providing high-quality spiritual, educational, and social services that empower individuals to lead a God-conscious life.</p>
+            </div>
+            <div class="bg-white p-10 rounded-2xl shadow-sm reveal" style="transition-delay: 400ms;">
+                <h3 class="text-2xl font-bold text-emerald-900 mb-4">Our Values</h3>
+                <p class="text-gray-600 leading-relaxed">Excellence, Integrity, Compassion, and Inclusivity are at the core of everything we do for our community.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-emerald-950 text-white pt-20 pb-10 px-4">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 mb-16 text-left">
+            <div class="col-span-1">
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-10 h-10 bg-gold-500 rounded-full flex items-center justify-center text-white text-xl">
+                        <i class="fa-solid fa-mosque"></i>
+                    </div>
+                    <span class="font-serif text-lg font-bold">E G Community Centre</span>
+                </div>
+                <p class="text-emerald-100/70 leading-relaxed text-sm">
+                    Dedicated to serving the spiritual and social needs of the Muslim community.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-gold-400 font-bold mb-6 uppercase tracking-widest text-sm">Quick Links</h4>
+                <ul class="space-y-4 text-emerald-100/80 text-sm">
+                    <li><a href="index.html" class="hover:text-gold-400 transition-colors">Home</a></li>
+                    <li><a href="services.html" class="hover:text-gold-400 transition-colors">Services</a></li>
+                    <li><a href="events.html" class="hover:text-gold-400 transition-colors">Events</a></li>
+                    <li><a href="contact.html" class="hover:text-gold-400 transition-colors">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-gold-400 font-bold mb-6 uppercase tracking-widest text-sm">Contact Us</h4>
+                <ul class="space-y-4 text-emerald-100/80 text-sm">
+                    <li class="flex items-start"><i class="fa-solid fa-location-dot mt-1 mr-3 text-gold-500"></i><span>123 Community Way, London, UK</span></li>
+                    <li class="flex items-center"><i class="fa-solid fa-phone mr-3 text-gold-500"></i><span>+44 20 1234 5678</span></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-gold-400 font-bold mb-6 uppercase tracking-widest text-sm">Newsletter</h4>
+                <form class="flex mt-4">
+                    <input type="email" placeholder="Email" class="bg-emerald-900 border-none rounded-l-md px-4 py-2 w-full text-sm">
+                    <button class="bg-gold-500 px-4 py-2 rounded-r-md hover:bg-gold-400"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto pt-10 border-t border-emerald-900 text-center text-emerald-100/40 text-xs">
+            <p>&copy; 2026 E G Muslim Community Centre. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
