@@ -13,7 +13,7 @@
     <nav class="fixed w-full z-50 transition-all duration-300 glass-nav">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
-                <div class="flex-shrink-0 flex items-center space-x-3">
+                <div class="flex-shrink:0 flex items-center space-x-3">
                     <div class="w-12 h-12 bg-gold-500 rounded-full flex items-center justify-center text-white text-2xl">
                         <i class="fa-solid fa-mosque"></i>
                     </div>
@@ -49,37 +49,26 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+    <header class="relative h-screen flex items-center justify-center overflow-hidden bg-emerald-950">
         <!-- Background Layers (Slideshow) -->
         <div class="absolute inset-0 z-0">
-            <!-- Image 1: Mosque Architecture -->
-            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1542332213-31f87348057f?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center animate-ken-burns animate-slideshow" style="animation-delay: 0s;"></div>
-            <!-- Image 2: Reciting Quran -->
-            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1584210439243-7f99ba5d57b2?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center animate-ken-burns animate-slideshow opacity-0" style="animation-delay: 6s;"></div>
-            <!-- Image 3: Prayer (Namaz) -->
-            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center animate-ken-burns animate-slideshow opacity-0" style="animation-delay: 12s;"></div>
-            <!-- Image 4: Hajj / Spiritual Journey -->
-            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center animate-ken-burns animate-slideshow opacity-0" style="animation-delay: 18s;"></div>
+            <div class="absolute inset-0 bg-cover bg-center animate-slideshow" style="background-image: url('asset/img6.jpg'); animation-delay: 0s;"></div>
+            <div class="absolute inset-0 bg-cover bg-center animate-slideshow" style="background-image: url('asset/img7.jpg'); animation-delay: -6s;"></div>
+            <div class="absolute inset-0 bg-cover bg-center animate-slideshow" style="background-image: url('asset/img8.jpg'); animation-delay: -12s;"></div>
+            <div class="absolute inset-0 bg-cover bg-center animate-slideshow" style="background-image: url('asset/img9.jpg'); animation-delay: -18s;"></div>
+            <div class="absolute inset-0 bg-cover bg-center animate-slideshow" style="background-image: url('asset/img10.jpg'); animation-delay: -24s;"></div>
         </div>
 
         <!-- Optimized Overlay -->
-        <div class="absolute inset-0 bg-emerald-950/50 z-[1]"></div>
+        <div class="absolute inset-0 bg-emerald-950/70 backdrop-blur-[2px] z-[1]"></div>
         
-        <!-- Floating Decoration -->
-        <div class="absolute top-1/4 left-10 text-gold-500/20 text-9xl animate-float hidden lg:block">
-            <i class="fa-solid fa-star-and-crescent"></i>
-        </div>
-        <div class="absolute bottom-1/4 right-10 text-gold-500/20 text-9xl animate-float hidden lg:block" style="animation-delay: -3s;">
-            <i class="fa-solid fa-moon"></i>
-        </div>
-
         <!-- Hero Content -->
-        <div class="relative z-10 text-center px-4 reveal">
-            <span class="text-gold-400 font-arabic text-4xl mb-4 block drop-shadow-md">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</span>
-            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-2xl">
+        <div class="relative z-10 text-center px-4">
+            <span class="text-gold-400 font-arabic text-4xl mb-4 block [text-shadow:_0_2px_15px_rgba(0,0,0,0.8)]">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</span>
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight [text-shadow:_0_4px_30px_rgba(0,0,0,0.9)]">
                 E G Muslim <br> <span class="text-gold-400">Community Centre</span>
             </h1>
-            <p class="text-gray-100 text-lg md:text-xl max-w-2xl mx-auto mb-10 font-medium drop-shadow-lg">
+            <p class="text-white text-lg md:text-xl max-w-2xl mx-auto mb-10 font-medium [text-shadow:_0_2px_15px_rgba(0,0,0,0.8)]">
                 Spreading the light of Islam and serving our community with compassion, education, and unity.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
@@ -87,22 +76,19 @@
                 <a href="services.html" class="border-2 border-white text-white hover:bg-white hover:text-emerald-950 backdrop-blur-sm transition-all px-10 py-3 rounded-md font-semibold text-lg drop-shadow-lg">Our Services</a>
             </div>
         </div>
-
-        <!-- Decorative Arch -->
-        <div class="absolute bottom-0 left-0 w-full h-32 bg-cream-50" style="clip-path: ellipse(70% 100% at 50% 100%);"></div>
     </header>
 
     <!-- Announcement Bar -->
     <div class="bg-gold-500 py-3 overflow-hidden whitespace-nowrap relative border-y border-gold-600 shadow-md">
         <div class="flex animate-marquee">
             <span class="text-white font-bold mx-10 uppercase tracking-widest text-sm flex items-center">
-                <i class="fa-solid fa-bullhorn mr-2"></i> Jumu'ah Prayer: 1st Khutbah 1:15 PM | 2nd Khutbah 2:15 PM
+                <i class="fa-solid fa-bullhorn mr-2"></i> New Quran Classes For Kids: Registration Now Open For May
             </span>
             <span class="text-white font-bold mx-10 uppercase tracking-widest text-sm flex items-center">
-                <i class="fa-solid fa-bullhorn mr-2"></i> Ramadan 2026: Expected to begin on Wednesday, March 11th
+                <i class="fa-solid fa-bullhorn mr-2"></i> New Quran Classes For Kids: Registration Now Open For May
             </span>
             <span class="text-white font-bold mx-10 uppercase tracking-widest text-sm flex items-center">
-                <i class="fa-solid fa-bullhorn mr-2"></i> New Quran Classes for Kids: Registration now open for April
+                <i class="fa-solid fa-bullhorn mr-2"></i> New Quran Classes For Kids: Registration Now Open For May
             </span>
         </div>
     </div>
@@ -137,7 +123,8 @@
             </div>
 
             <div class="mt-16 text-center reveal">
-                <p class="text-emerald-100/60 italic text-sm">"Establish prayer, for it is a duty incumbent on the faithful at appointed hours." (Quran 4:103)</p>
+                <p class="text-gold-400 font-arabic text-2xl mb-4 font-bold">إِنَّ الصَّلَاةَ كَانَتْ عَلَى الْمُؤْمِنِينَ كِتَابًا مَّوْقُوتًا</p>
+                <p class="text-emerald-100/80 italic text-sm font-bold">"Establish prayer, for it is a duty incumbent on the faithful at appointed hours." (Quran 4:103)</p>
             </div>
         </div>
     </section>
@@ -158,9 +145,9 @@
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Islamic Education</h3>
                     <p class="text-gray-600 leading-relaxed mb-6">Offering Quranic studies, Arabic language classes, and weekend madrasah for all ages.</p>
-                    <a href="services.html" class="text-emerald-800 font-bold flex items-center hover:text-gold-500">
+                    <!-- <a href="services.html" class="text-emerald-800 font-bold flex items-center hover:text-gold-500">
                         Learn More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
-                    </a>
+                    </a> -->
                 </div>
 
                 <!-- Service 2 -->
@@ -170,9 +157,9 @@
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Nikah Services</h3>
                     <p class="text-gray-600 leading-relaxed mb-6">Providing Islamic marriage ceremonies and family counseling in accordance with Sunnah.</p>
-                    <a href="services.html" class="text-gold-500 font-bold flex items-center hover:text-emerald-800">
+                    <!-- <a href="services.html" class="text-gold-500 font-bold flex items-center hover:text-emerald-800">
                         Learn More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
-                    </a>
+                    </a> -->
                 </div>
 
                 <!-- Service 3 -->
@@ -182,9 +169,9 @@
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Social Support</h3>
                     <p class="text-gray-600 leading-relaxed mb-6">Food banks, youth clubs, and community gatherings to strengthen our local bonds.</p>
-                    <a href="services.html" class="text-emerald-800 font-bold flex items-center hover:text-gold-500">
+                    <!-- <a href="services.html" class="text-emerald-800 font-bold flex items-center hover:text-gold-500">
                         Learn More <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
-                    </a>
+                    </a> -->
                 </div>
             </div>
         </div>
@@ -206,6 +193,17 @@
                 <div class="flex flex-wrap gap-4">
                     <a href="contact.html" class="btn-gold py-4 px-8 text-lg">Visit Us Today</a>
                     <a href="about.html" class="bg-white/10 backdrop-blur-md text-white border border-white/20 hover:bg-white hover:text-emerald-950 px-8 py-4 rounded-md transition-all font-semibold">Learn More</a>
+                </div>
+            </div>
+
+            <!-- WhatsApp QR Code -->
+            <div class="reveal flex flex-col items-center md:items-end" style="transition-delay: 200ms;">
+                <div class="bg-white p-4 rounded-2xl shadow-2xl max-w-[280px]">
+                    <img src="asset/img5.jpeg" alt="WhatsApp Community QR Code" class="rounded-lg w-full h-auto">
+                    <div class="mt-4 text-center">
+                        <p class="text-emerald-900 font-bold text-sm uppercase tracking-wider">Join Our WhatsApp</p>
+                        <p class="text-gray-500 text-xs mt-1">Scan to stay updated</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -238,18 +236,18 @@
 
             <div>
                 <h4 class="text-gold-400 font-bold mb-6 uppercase tracking-widest text-sm">Contact Us</h4>
-                <ul class="space-y-4 text-emerald-100/80">
+                <ul class="space-y-4 text-emerald-100/80 text-sm">
                     <li class="flex items-start">
                         <i class="fa-solid fa-location-dot mt-1 mr-3 text-gold-500"></i>
-                        <span>123 Community Way, London, UK</span>
+                        <span>The Kings Centre, Moat Road, East Grinstead, RH19 3LN</span>
                     </li>
                     <li class="flex items-center">
                         <i class="fa-solid fa-phone mr-3 text-gold-500"></i>
-                        <span>+44 20 1234 5678</span>
+                        <span>07943 017215 / 07487 550612</span>
                     </li>
                     <li class="flex items-center">
                         <i class="fa-solid fa-envelope mr-3 text-gold-500"></i>
-                        <span>info@egcommunity.org</span>
+                        <span>info@egmuslimcommunity.co.uk</span>
                     </li>
                 </ul>
             </div>
@@ -257,16 +255,16 @@
             <div>
                 <h4 class="text-gold-400 font-bold mb-6 uppercase tracking-widest text-sm">Newsletter</h4>
                 <p class="text-emerald-100/70 mb-4 text-sm">Stay updated with our latest news and events.</p>
-                <form class="flex">
-                    <input type="email" placeholder="Email Address" class="bg-emerald-900 border-none rounded-l-md px-4 py-2 w-full focus:ring-1 focus:ring-gold-500">
-                    <button class="bg-gold-500 px-4 py-2 rounded-r-md hover:bg-gold-400 transition-colors">
+                <form id="newsletter-form" class="flex">
+                    <input type="email" name="email" placeholder="Email Address" class="bg-emerald-900 border-none rounded-l-md px-4 py-2 w-full focus:ring-1 focus:ring-gold-500 text-sm" required>
+                    <button type="submit" class="bg-gold-500 px-4 py-2 rounded-r-md hover:bg-gold-400 transition-colors">
                         <i class="fa-solid fa-paper-plane"></i>
                     </button>
                 </form>
             </div>
         </div>
         
-        <div class="max-w-7xl mx-auto pt-10 border-t border-emerald-900 text-center text-emerald-100/40 text-sm">
+        <div class="max-w-7xl mx-auto pt-10 border-t border-emerald-900 text-center text-emerald-100/40 text-xs">
             <p>&copy; 2026 E G Muslim Community Centre. All rights reserved.</p>
         </div>
     </footer>
