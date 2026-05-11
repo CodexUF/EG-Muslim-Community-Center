@@ -12,15 +12,11 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'src')));
 
-// View Engine Setup
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
-
-// Routes
-app.get('/', (req, res) => res.render('index'));
-app.get('/about', (req, res) => res.render('about'));
-app.get('/events', (req, res) => res.render('events'));
-app.get('/contact', (req, res) => res.render('contact'));
+// Serve HTML files
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'src', 'index.html')));
+app.get('/about', (req, res) => res.sendFile(path.join(__dirname, 'src', 'about.html')));
+app.get('/events', (req, res) => res.sendFile(path.join(__dirname, 'src', 'events.html')));
+app.get('/contact', (req, res) => res.sendFile(path.join(__dirname, 'src', 'contact.html')));
 
 // Contact Form Endpoint
 app.post('/api/contact', async (req, res) => {
