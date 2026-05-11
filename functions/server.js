@@ -14,7 +14,9 @@ app.use(express.static(path.join(__dirname, '../src')));
 
 // View Engine Setup
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, '../views'));
+// Resolve views path correctly for both local and Netlify environments
+const viewsPath = path.resolve(process.cwd(), 'views');
+app.set('views', viewsPath);
 
 // Routes
 app.get('/', (req, res) => res.render('index'));
