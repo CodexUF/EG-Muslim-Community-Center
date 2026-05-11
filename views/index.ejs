@@ -1,0 +1,139 @@
+<%- include('partials/head', { title: 'Welcome' }) %>
+<%- include('partials/header', { page: 'home', transparentNav: true }) %>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen flex items-center justify-center overflow-hidden bg-emerald-950">
+        <!-- Background Layers (Slideshow) -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-cover bg-center animate-slideshow" style="background-image: url('asset/img6.webp'); animation-delay: 0s;"></div>
+            <div class="absolute inset-0 bg-cover bg-center animate-slideshow" style="background-image: url('asset/img7.webp'); animation-delay: -6s;"></div>
+            <div class="absolute inset-0 bg-cover bg-center animate-slideshow" style="background-image: url('asset/img8.webp'); animation-delay: -12s;"></div>
+            <div class="absolute inset-0 bg-cover bg-center animate-slideshow" style="background-image: url('asset/img9.webp'); animation-delay: -18s;"></div>
+            <div class="absolute inset-0 bg-cover bg-center animate-slideshow" style="background-image: url('asset/img10.webp'); animation-delay: -24s;"></div>
+        </div>
+
+        <!-- Optimized Overlay -->
+        <div class="absolute inset-0 bg-emerald-950/70 backdrop-blur-[2px] z-[1]"></div>
+        
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center px-4">
+            <span class="text-gold-400 font-arabic text-4xl mb-4 block [text-shadow:_0_2px_15px_rgba(0,0,0,0.8)]">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</span>
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight [text-shadow:_0_4px_30px_rgba(0,0,0,0.9)]">
+                E G Muslim <br> <span class="text-gold-400">Community Centre</span>
+            </h1>
+            <p class="text-white text-lg md:text-xl max-w-2xl mx-auto mb-10 font-medium [text-shadow:_0_2px_15px_rgba(0,0,0,0.8)]">
+                Spreading the light of Islam and serving our community with compassion, education, and unity.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#prayer-times" class="btn-gold text-lg py-3 px-10 shadow-[0_0_20px_rgba(217,119,6,0.6)]">Prayer Times</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Announcement Bar -->
+    <div class="bg-gold-500 py-3 overflow-hidden whitespace-nowrap relative border-y border-gold-600 shadow-md min-h-[50px]">
+        <div class="flex animate-marquee">
+            <span class="text-white font-bold mx-10 uppercase tracking-widest text-sm flex items-center">
+                <i class="fa-solid fa-bullhorn mr-2"></i> New Quran Classes For Kids: Registration Now Open For May
+            </span>
+            <span class="text-white font-bold mx-10 uppercase tracking-widest text-sm flex items-center">
+                <i class="fa-solid fa-bullhorn mr-2"></i> New Quran Classes For Kids: Registration Now Open For May
+            </span>
+            <span class="text-white font-bold mx-10 uppercase tracking-widest text-sm flex items-center">
+                <i class="fa-solid fa-bullhorn mr-2"></i> New Quran Classes For Kids: Registration Now Open For May
+            </span>
+        </div>
+    </div>
+
+    <!-- Prayer Times Section -->
+    <section id="prayer-times" class="py-24 px-4 relative overflow-hidden">
+        <!-- Background Layer with Image -->
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-fixed bg-center">
+            <div class="absolute inset-0 bg-emerald-950/85 backdrop-blur-sm"></div>
+        </div>
+
+        <!-- Islamic Pattern Background -->
+        <div class="absolute inset-0 opacity-20 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/islamic-art.png')]"></div>
+        
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="text-center mb-16 reveal">
+                <span class="text-gold-400 font-arabic text-3xl mb-2 block">حَيَّ عَلَى الصَّلَاةِ</span>
+                <h2 class="text-4xl font-bold text-white mb-4">Prayer Services</h2>
+                <div class="w-24 h-1 bg-gold-400 mx-auto rounded-full"></div>
+                
+                <div class="mt-12 max-w-md mx-auto bg-emerald-900/40 backdrop-blur-md p-8 rounded-2xl border border-gold-500/30 reveal">
+                    <h3 class="text-gold-400 text-2xl font-bold mb-6">Friday Jumu'ah</h3>
+                    <div class="space-y-4 text-white text-lg">
+                        <div class="flex justify-between border-b border-emerald-800 pb-2">
+                            <span>Venue Opens</span>
+                            <span class="font-bold">1:00 PM</span>
+                        </div>
+                        <div class="flex justify-between border-b border-emerald-800 pb-2">
+                            <span>Khutbah</span>
+                            <span class="font-bold">1:15 PM</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Prayer</span>
+                            <span class="font-bold">1:30 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-emerald-100 mt-8 text-lg max-w-2xl mx-auto">
+                    We currently arrange Friday Jumu'ah services by hiring a hall. Other daily prayer arrangements are coming up.
+                </p>
+            </div>
+
+            <div class="mt-16 text-center reveal">
+                <p class="text-gold-400 font-arabic text-2xl mb-4 font-bold">إِنَّ الصَّلَاةَ كَانَتْ عَلَى الْمُؤْمِنِينَ كِتَابًا مَّوْقُوتًا</p>
+                <p class="text-emerald-100/80 italic text-sm font-bold">"Establish prayer, for it is a duty incumbent on the faithful at appointed hours." (Quran 4:103)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Congregation Section -->
+    <section class="py-32 px-4 relative overflow-hidden group">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1594474139199-6e445580a561?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center transition-transform duration-[10s] group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-r from-emerald-950 to-emerald-900/40"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto relative z-10 grid md:grid-cols-2 gap-12 items-center">
+            <div class="reveal">
+                <span class="text-gold-400 font-bold uppercase tracking-widest text-sm mb-4 block">Spiritual Unity</span>
+                <h2 class="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight">Join Our <br> <span class="text-gold-400">Congregation</span></h2>
+                <p class="text-emerald-100 text-lg mb-10 max-w-lg leading-relaxed">
+                    We currently only arrange Friday Jumu'ah services by hiring a hall. Other daily prayer arrangements are coming up.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="/contact" class="btn-gold py-4 px-8 text-lg">Visit Us Today</a>
+                    <a href="/about" class="bg-white/10 backdrop-blur-md text-white border border-white/20 hover:bg-white hover:text-emerald-950 px-8 py-4 rounded-md transition-all font-semibold">Learn More</a>
+                </div>
+            </div>
+
+            <!-- WhatsApp QR Code -->
+            <div class="reveal flex flex-col items-center md:items-end" style="transition-delay: 200ms;">
+                <div class="bg-white p-4 rounded-2xl shadow-2xl max-w-[280px]">
+                    <img src="asset/img5.webp" alt="WhatsApp Community QR Code" class="rounded-lg w-full h-auto" width="280" height="280">
+                    <div class="mt-4 text-center">
+                        <p class="text-emerald-900 font-bold text-sm uppercase tracking-wider">Join Our WhatsApp</p>
+                        <p class="text-gray-500 text-xs mt-1">Scan to stay updated</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 30s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+    </style>
+
+<%- include('partials/footer') %>
