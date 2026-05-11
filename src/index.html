@@ -9,13 +9,12 @@
     <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
-    <!-- Preload critical fonts -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" as="style">
+    <!-- Optimized Font Loading -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     
     <link href="./output.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
 
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -81,11 +80,11 @@
     <header class="relative h-screen flex items-center justify-center overflow-hidden bg-emerald-950">
         <!-- Background Layers (Slideshow) -->
         <div class="absolute inset-0 z-0">
-            <div class="absolute inset-0 bg-cover bg-center animate-slideshow" style="background-image: url('asset/img6.jpg'); animation-delay: 0s;"></div>
-            <div class="absolute inset-0 bg-cover bg-center animate-slideshow" style="background-image: url('asset/img7.jpg'); animation-delay: -6s;"></div>
-            <div class="absolute inset-0 bg-cover bg-center animate-slideshow" style="background-image: url('asset/img8.jpg'); animation-delay: -12s;"></div>
-            <div class="absolute inset-0 bg-cover bg-center animate-slideshow" style="background-image: url('asset/img9.jpg'); animation-delay: -18s;"></div>
-            <div class="absolute inset-0 bg-cover bg-center animate-slideshow" style="background-image: url('asset/img10.jpg'); animation-delay: -24s;"></div>
+            <div class="absolute inset-0 bg-cover bg-center animate-slideshow" style="background-image: url('asset/img6.webp'); animation-delay: 0s;"></div>
+            <div class="absolute inset-0 bg-cover bg-center animate-slideshow" style="background-image: url('asset/img7.webp'); animation-delay: -6s;"></div>
+            <div class="absolute inset-0 bg-cover bg-center animate-slideshow" style="background-image: url('asset/img8.webp'); animation-delay: -12s;"></div>
+            <div class="absolute inset-0 bg-cover bg-center animate-slideshow" style="background-image: url('asset/img9.webp'); animation-delay: -18s;"></div>
+            <div class="absolute inset-0 bg-cover bg-center animate-slideshow" style="background-image: url('asset/img10.webp'); animation-delay: -24s;"></div>
         </div>
 
         <!-- Optimized Overlay -->
@@ -219,7 +218,7 @@
             <!-- WhatsApp QR Code -->
             <div class="reveal flex flex-col items-center md:items-end" style="transition-delay: 200ms;">
                 <div class="bg-white p-4 rounded-2xl shadow-2xl max-w-[280px]">
-                    <img src="asset/img5.jpeg" alt="WhatsApp Community QR Code" class="rounded-lg w-full h-auto">
+                    <img src="asset/img5.webp" alt="WhatsApp Community QR Code" class="rounded-lg w-full h-auto">
                     <div class="mt-4 text-center">
                         <p class="text-emerald-900 font-bold text-sm uppercase tracking-wider">Join Our WhatsApp</p>
                         <p class="text-gray-500 text-xs mt-1">Scan to stay updated</p>
