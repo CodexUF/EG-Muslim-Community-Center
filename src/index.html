@@ -3,9 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E G Muslim Community Centre | Welcome</title>
+    <meta name="description" content="E G Muslim Community Centre in East Grinstead, providing spiritual guidance, community services, Quranic education, and social support.">
+    <title>E G Muslim Community Centre | Welcome to our Community</title>
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" as="style">
+    
     <link href="./output.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ReligiousOrganization",
+      "name": "E G Muslim Community Centre",
+      "url": "https://egmuslimcommunity.co.uk",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "The Kings Centre, Moat Road",
+        "addressLocality": "East Grinstead",
+        "postalCode": "RH19 3LN",
+        "addressCountry": "GB"
+      },
+      "telephone": "07943 017215",
+      "email": "info@egmuslimcommunity.co.uk"
+    }
+    </script>
 </head>
 <body class="bg-cream-50 selection:bg-gold-500 selection:text-white">
 
@@ -31,8 +60,8 @@
 
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
-                    <button id="menu-btn" class="text-white hover:text-gold-400 focus:outline-none">
-                        <i class="fa-solid fa-bars text-2xl"></i>
+                    <button id="menu-btn" aria-label="Toggle mobile menu" class="text-white hover:text-gold-400 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
@@ -106,20 +135,11 @@
         <div class="max-w-6xl mx-auto relative z-10">
             <div class="text-center mb-16 reveal">
                 <span class="text-gold-400 font-arabic text-3xl mb-2 block">حَيَّ عَلَى الصَّلَاةِ</span>
-                <h2 class="text-4xl font-bold text-white mb-4">Daily Prayer Times</h2>
+                <h2 class="text-4xl font-bold text-white mb-4">Prayer Services</h2>
                 <div class="w-24 h-1 bg-gold-400 mx-auto rounded-full"></div>
-                <p class="text-emerald-100 mt-6 text-xl">
-                    Next Prayer: <span id="next-prayer-name" class="text-gold-400 font-bold">---</span> at <span id="next-prayer-time" class="text-gold-400 font-bold">--:--</span>
+                <p class="text-emerald-100 mt-8 text-xl max-w-2xl mx-auto">
+                    We currently only arrange Friday Jumu'ah services by hiring a hall. Other daily prayer arrangements are coming up.
                 </p>
-            </div>
-
-            <div id="prayer-times-grid" class="grid grid-cols-2 md:grid-cols-5 gap-6 reveal">
-                <!-- Skeleton Loading -->
-                <div class="bg-emerald-800/50 animate-pulse h-32 rounded-xl border border-emerald-700"></div>
-                <div class="bg-emerald-800/50 animate-pulse h-32 rounded-xl border border-emerald-700"></div>
-                <div class="bg-emerald-800/50 animate-pulse h-32 rounded-xl border border-emerald-700"></div>
-                <div class="bg-emerald-800/50 animate-pulse h-32 rounded-xl border border-emerald-700"></div>
-                <div class="bg-emerald-800/50 animate-pulse h-32 rounded-xl border border-emerald-700"></div>
             </div>
 
             <div class="mt-16 text-center reveal">
@@ -188,7 +208,7 @@
                 <span class="text-gold-400 font-bold uppercase tracking-widest text-sm mb-4 block">Spiritual Unity</span>
                 <h2 class="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight">Join Our <br> <span class="text-gold-400">Congregation</span></h2>
                 <p class="text-emerald-100 text-lg mb-10 max-w-lg leading-relaxed">
-                    Experience the tranquility of communal prayer. We welcome all brothers and sisters to join our daily Salah and Jumu'ah services.
+                    We currently only arrange Friday Jumu'ah services by hiring a hall. Other daily prayer arrangements are coming up.
                 </p>
                 <div class="flex flex-wrap gap-4">
                     <a href="contact.html" class="btn-gold py-4 px-8 text-lg">Visit Us Today</a>
@@ -255,7 +275,7 @@
             <div>
                 <h4 class="text-gold-400 font-bold mb-6 uppercase tracking-widest text-sm">Newsletter</h4>
                 <p class="text-emerald-100/70 mb-4 text-sm">Stay updated with our latest news and events.</p>
-                <form id="newsletter-form" class="flex">
+                <form id="newsletter-form" aria-label="Newsletter subscription" class="flex">
                     <input type="email" name="email" placeholder="Email Address" class="bg-emerald-900 border-none rounded-l-md px-4 py-2 w-full focus:ring-1 focus:ring-gold-500 text-sm" required>
                     <button type="submit" class="bg-gold-500 px-4 py-2 rounded-r-md hover:bg-gold-400 transition-colors">
                         <i class="fa-solid fa-paper-plane"></i>
@@ -269,7 +289,7 @@
         </div>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
     <style>
         @keyframes marquee {
             0% { transform: translateX(0); }
