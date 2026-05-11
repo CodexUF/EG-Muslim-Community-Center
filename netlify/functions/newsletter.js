@@ -6,6 +6,13 @@ exports.handler = async (event, context) => {
     }
 
     try {
+        if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+            return {
+                statusCode: 500,
+                body: JSON.stringify({ success: false, message: 'ERROR: Variables not found in Netlify. Please check Site Configuration > Environment Variables.' })
+            };
+        }
+
         const { email } = JSON.parse(event.body);
         if (!email) {
             return { statusCode: 400, body: JSON.stringify({ success: false, message: 'Email is required.' }) };
