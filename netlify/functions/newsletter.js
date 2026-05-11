@@ -7,18 +7,17 @@ exports.handler = async (event, context) => {
 
     try {
         const { email } = JSON.parse(event.body);
+        if (!email) {
+            return { statusCode: 400, body: JSON.stringify({ success: false, message: 'Email is required.' }) };
+        }
 
-        // Try Port 587 (STARTTLS) which is often more compatible with cloud hosts
         const transporter = nodemailer.createTransport({
-            host: 'mail.privateemail.com',
-            port: 587,
-            secure: false, // true for 465, false for other ports
+            host: process.env.EMAIL_HOST || 'mail.privateemail.com',
+            port: parseInt(process.env.EMAIL_PORT || '465'),
+            secure: true,
             auth: {
                 user: process.env.EMAIL_USER,
                 pass: process.env.EMAIL_PASS
-            },
-            tls: {
-                ciphers: 'SSLv3'
             }
         });
 
@@ -44,16 +43,12 @@ exports.handler = async (event, context) => {
         return {
             statusCode: 200,
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ success: true, message: 'Subscribed successfully!' }),
+            body: JSON.stringify({ success: true, message: 'Subscribed successfully!' })
         };
     } catch (error) {
-        console.error('Namecheap Newsletter Error:', error);
         return {
             statusCode: 500,
-            body: JSON.stringify({ 
-                success: false, 
-                message: `Subscription failed: ${error.message}` // Show exact error to user
-            }),
+            body: JSON.stringify({ success: false, message: 'Subscription failed.' })
         };
     }
 };

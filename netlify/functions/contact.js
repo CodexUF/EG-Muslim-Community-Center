@@ -7,43 +7,38 @@ exports.handler = async (event, context) => {
 
     try {
         const { name, email, subject, message } = JSON.parse(event.body);
+        if (!name || !email || !subject || !message) {
+            return { statusCode: 400, body: JSON.stringify({ success: false, message: 'All fields are required.' }) };
+        }
 
         const transporter = nodemailer.createTransport({
-            host: 'mail.privateemail.com',
-            port: 587,
-            secure: false,
+            host: process.env.EMAIL_HOST || 'mail.privateemail.com',
+            port: parseInt(process.env.EMAIL_PORT || '465'),
+            secure: true,
             auth: {
                 user: process.env.EMAIL_USER,
                 pass: process.env.EMAIL_PASS
-            },
-            tls: {
-                ciphers: 'SSLv3'
             }
         });
 
         const mailOptions = {
-            from: `"${name}" <${process.env.EMAIL_USER}>`,
+            from: `"Contact Form" <${process.env.EMAIL_USER}>`,
             to: process.env.EMAIL_USER,
             replyTo: email,
             subject: `Contact Form: ${subject}`,
-            text: `From: ${name} (${email})\n\nMessage:\n${message}`
+            text: `You have a new message from ${name} (${email}):\n\n${message}`
         };
 
         await transporter.sendMail(mailOptions);
-
         return {
             statusCode: 200,
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ success: true, message: 'Message sent successfully!' }),
+            body: JSON.stringify({ success: true, message: 'Message sent successfully!' })
         };
     } catch (error) {
-        console.error('Namecheap Email Error:', error);
         return {
             statusCode: 500,
-            body: JSON.stringify({ 
-                success: false, 
-                message: `Failed to send message: ${error.message}`
-            }),
+            body: JSON.stringify({ success: false, message: 'Failed to send message.' })
         };
     }
 };
