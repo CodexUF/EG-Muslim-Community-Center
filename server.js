@@ -24,6 +24,12 @@ app.post('/api/contact', async (req, res) => {
     if (!name || !email || !subject || !message) {
         return res.status(400).json({ success: false, message: 'All fields are required.' });
     }
+    
+    // Validate Gmail domain
+    if (!email.toLowerCase().endsWith('@gmail.com')) {
+        return res.status(400).json({ success: false, message: 'Only Gmail addresses are accepted.' });
+    }
+
     try {
         const transporter = nodemailer.createTransport({
             host: process.env.EMAIL_HOST || 'mail.privateemail.com',
@@ -55,6 +61,12 @@ app.post('/api/newsletter', async (req, res) => {
     if (!email) {
         return res.status(400).json({ success: false, message: 'Email is required.' });
     }
+    
+    // Validate Gmail domain
+    if (!email.toLowerCase().endsWith('@gmail.com')) {
+        return res.status(400).json({ success: false, message: 'Only Gmail addresses are accepted.' });
+    }
+
     try {
         const transporter = nodemailer.createTransport({
             host: process.env.EMAIL_HOST || 'mail.privateemail.com',
