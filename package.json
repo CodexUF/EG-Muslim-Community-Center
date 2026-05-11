@@ -9,7 +9,8 @@
     "dotenv": "^17.4.2",
     "ejs": "^5.0.2",
     "express": "^5.2.1",
-    "nodemailer": "^8.0.7"
+    "nodemailer": "^8.0.7",
+    "serverless-http": "^4.0.0"
   },
   "devDependencies": {
     "tailwindcss": "^4.2.4"
