@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | E G Muslim Community Centre</title>
+    <link href="/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-cream-50 selection:bg-gold-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-emerald-950 shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <a href="index.html" class="flex-shrink-0 flex items-center space-x-3 group">
+                    <div class="w-12 h-12 bg-gold-500 rounded-full flex items-center justify-center text-white text-2xl group-hover:bg-gold-400 transition-colors">
+                        <i class="fa-solid fa-mosque"></i>
+                    </div>
+                    <span class="text-white font-serif text-xl font-bold tracking-tight group-hover:text-gold-400 transition-colors">E G Community Centre</span>
+                </a>
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-200 hover:text-gold-400 transition-colors px-1 pt-1 text-sm font-medium">Home</a>
+                    <a href="about.html" class="text-gray-200 hover:text-gold-400 transition-colors px-1 pt-1 text-sm font-medium">About Us</a>
+                    <a href="events.html" class="text-gold-400 border-b-2 border-gold-400 px-1 pt-1 text-sm font-medium">Events</a>
+                    <a href="contact.html" class="btn-gold">Contact Us</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-white hover:text-gold-400 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-emerald-950 px-4 pt-2 pb-6 space-y-2 border-t border-emerald-800">
+            <a href="index.html" class="block text-gray-200 hover:text-gold-400 py-2 text-base font-medium">Home</a>
+            <a href="about.html" class="block text-gray-200 hover:text-gold-400 py-2 text-base font-medium">About Us</a>
+            <a href="events.html" class="block text-gold-400 py-2 text-base font-medium">Events</a>
+            <a href="contact.html" class="block text-center btn-gold mt-4">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-20 bg-emerald-900 relative overflow-hidden text-center">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/islamic-art.png')]"></div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Upcoming Events</h1>
+            <p class="text-emerald-100 max-w-2xl mx-auto text-lg font-light">Join us in our community gatherings, lectures, and celebrations.</p>
+        </div>
+    </section>
+
+    <!-- Events Timeline -->
+    <section class="py-24 px-4">
+        <div class="max-w-4xl mx-auto space-y-12">
+            <!-- Event 1 -->
+            <div class="bg-white rounded-2xl shadow-sm overflow-hidden flex flex-col md:flex-row reveal">
+                <div class="md:w-1/3 bg-gold-500 text-white p-8 flex flex-col justify-center items-center">
+                    <span class="text-4xl font-bold">11</span>
+                    <span class="text-xl uppercase tracking-widest">March</span>
+                    <span class="mt-4 bg-white/20 px-3 py-1 rounded-full text-xs">2026</span>
+                </div>
+                <div class="md:w-2/3 p-8">
+                    <span class="text-gold-500 font-bold text-sm uppercase">Ramadan 2026</span>
+                    <h3 class="text-2xl font-bold text-emerald-950 mt-1 mb-4">First Day of Ramadan</h3>
+                    <p class="text-gray-600 mb-6">Join us for the first Taraweeh prayers and community Iftar. Please check the website for the full Ramadan timetable.</p>
+                    <div class="flex items-center text-emerald-800 font-medium">
+                        <i class="fa-solid fa-clock mr-2"></i> After Isha Prayer
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 2 -->
+            <div class="bg-white rounded-2xl shadow-sm overflow-hidden flex flex-col md:flex-row reveal" style="transition-delay: 150ms;">
+                <div class="md:w-1/3 bg-emerald-800 text-white p-8 flex flex-col justify-center items-center">
+                    <span class="text-4xl font-bold">25</span>
+                    <span class="text-xl uppercase tracking-widest">April</span>
+                    <span class="mt-4 bg-white/20 px-3 py-1 rounded-full text-xs">2026</span>
+                </div>
+                <div class="md:w-2/3 p-8">
+                    <span class="text-emerald-800 font-bold text-sm uppercase">Community Youth</span>
+                    <h3 class="text-2xl font-bold text-emerald-950 mt-1 mb-4">Youth Football Tournament</h3>
+                    <p class="text-gray-600 mb-6">Our annual community tournament for ages 12-18. Registration required. Food and prizes for all participants.</p>
+                    <div class="flex items-center text-emerald-800 font-medium">
+                        <i class="fa-solid fa-location-dot mr-2"></i> Local Community Park
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 3 -->
+            <div class="bg-white rounded-2xl shadow-sm overflow-hidden flex flex-col md:flex-row reveal" style="transition-delay: 300ms;">
+                <div class="md:w-1/3 bg-gold-500 text-white p-8 flex flex-col justify-center items-center">
+                    <span class="text-4xl font-bold">10</span>
+                    <span class="text-xl uppercase tracking-widest">May</span>
+                    <span class="mt-4 bg-white/20 px-3 py-1 rounded-full text-xs">2026</span>
+                </div>
+                <div class="md:w-2/3 p-8">
+                    <span class="text-gold-500 font-bold text-sm uppercase">Islamic Lecture</span>
+                    <h3 class="text-2xl font-bold text-emerald-950 mt-1 mb-4">The Life of Prophet Muhammad (PBUH)</h3>
+                    <p class="text-gray-600 mb-6">A special evening lecture by Guest Imam on the Seerah of the Prophet and its relevance today.</p>
+                    <div class="flex items-center text-emerald-800 font-medium">
+                        <i class="fa-solid fa-clock mr-2"></i> 7:00 PM - 9:00 PM
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-emerald-950 text-white pt-20 pb-10 px-4">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 mb-16">
+            <div class="col-span-1 md:col-span-1">
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-10 h-10 bg-gold-500 rounded-full flex items-center justify-center text-white text-xl">
+                        <i class="fa-solid fa-mosque"></i>
+                    </div>
+                    <span class="font-serif text-lg font-bold">E G Community Centre</span>
+                </div>
+                <p class="text-emerald-100/70 leading-relaxed">
+                    Dedicated to serving the spiritual and social needs of the Muslim community in the heart of our city.
+                </p>
+            </div>
+            
+            <div>
+                <h4 class="text-gold-400 font-bold mb-6 uppercase tracking-widest text-sm">Quick Links</h4>
+                <ul class="space-y-4 text-emerald-100/80">
+                    <li><a href="about.html" class="hover:text-gold-400 transition-colors">Our History</a></li>
+                    <li><a href="events.html" class="hover:text-gold-400 transition-colors">Upcoming Events</a></li>
+                    <li><a href="contact.html" class="hover:text-gold-400 transition-colors">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-gold-400 font-bold mb-6 uppercase tracking-widest text-sm">Contact Us</h4>
+                <ul class="space-y-4 text-emerald-100/80 text-sm">
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-location-dot mt-1 mr-3 text-gold-500"></i>
+                        <span>The Kings Centre, Moat Road, East Grinstead, RH19 3LN</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa-solid fa-phone mr-3 text-gold-500"></i>
+                        <span>07943 017215 / 07487 550612</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa-solid fa-envelope mr-3 text-gold-500"></i>
+                        <span>info@egmuslimcommunity.co.uk</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-gold-400 font-bold mb-6 uppercase tracking-widest text-sm">Newsletter</h4>
+                <p class="text-emerald-100/70 mb-4 text-sm">Stay updated with our latest news and events.</p>
+                <form id="newsletter-form" aria-label="Newsletter subscription" class="flex">
+                    <input type="email" name="email" placeholder="Email Address" class="bg-emerald-900 border-none rounded-l-md px-4 py-2 w-full focus:ring-1 focus:ring-gold-500 text-sm" required>
+                    <button type="submit" class="bg-gold-500 px-4 py-2 rounded-r-md hover:bg-gold-400 transition-colors">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto pt-10 border-t border-emerald-900 text-center text-emerald-100/40 text-xs">
+            <p>&copy; 2026 E G Muslim Community Centre. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="main.js" defer></script>
+</body>
+</html>
