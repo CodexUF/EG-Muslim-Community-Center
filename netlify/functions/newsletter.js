@@ -8,13 +8,17 @@ exports.handler = async (event, context) => {
     try {
         const { email } = JSON.parse(event.body);
 
+        // Try Port 587 (STARTTLS) which is often more compatible with cloud hosts
         const transporter = nodemailer.createTransport({
             host: 'mail.privateemail.com',
-            port: 465,
-            secure: true,
+            port: 587,
+            secure: false, // true for 465, false for other ports
             auth: {
                 user: process.env.EMAIL_USER,
                 pass: process.env.EMAIL_PASS
+            },
+            tls: {
+                ciphers: 'SSLv3'
             }
         });
 
@@ -48,8 +52,7 @@ exports.handler = async (event, context) => {
             statusCode: 500,
             body: JSON.stringify({ 
                 success: false, 
-                message: 'Subscription failed.',
-                error: error.message 
+                message: `Subscription failed: ${error.message}` // Show exact error to user
             }),
         };
     }

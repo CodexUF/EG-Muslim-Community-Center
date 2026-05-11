@@ -8,19 +8,21 @@ exports.handler = async (event, context) => {
     try {
         const { name, email, subject, message } = JSON.parse(event.body);
 
-        // Namecheap SMTP Configuration
         const transporter = nodemailer.createTransport({
             host: 'mail.privateemail.com',
-            port: 465,
-            secure: true, // Use SSL
+            port: 587,
+            secure: false,
             auth: {
                 user: process.env.EMAIL_USER,
                 pass: process.env.EMAIL_PASS
+            },
+            tls: {
+                ciphers: 'SSLv3'
             }
         });
 
         const mailOptions = {
-            from: `"${name}" <${process.env.EMAIL_USER}>`, // Must be your authenticated email
+            from: `"${name}" <${process.env.EMAIL_USER}>`,
             to: process.env.EMAIL_USER,
             replyTo: email,
             subject: `Contact Form: ${subject}`,
@@ -40,8 +42,7 @@ exports.handler = async (event, context) => {
             statusCode: 500,
             body: JSON.stringify({ 
                 success: false, 
-                message: 'Failed to send message.',
-                error: error.message 
+                message: `Failed to send message: ${error.message}`
             }),
         };
     }
