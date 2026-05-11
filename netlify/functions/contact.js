@@ -36,6 +36,7 @@ exports.handler = async (event, context) => {
             body: JSON.stringify({ success: true, message: 'Message sent successfully!' })
         };
     } catch (error) {
+        console.error('Contact Form Error:', error);
         return {
             statusCode: 500,
             body: JSON.stringify({ success: false, message: 'Failed to send message.' })

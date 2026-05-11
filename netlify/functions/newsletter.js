@@ -46,6 +46,7 @@ exports.handler = async (event, context) => {
             body: JSON.stringify({ success: true, message: 'Subscribed successfully!' })
         };
     } catch (error) {
+        console.error('Newsletter Error:', error);
         return {
             statusCode: 500,
             body: JSON.stringify({ success: false, message: 'Subscription failed.' })
