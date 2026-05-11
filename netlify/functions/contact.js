@@ -1,7 +1,6 @@
 const nodemailer = require('nodemailer');
 
 exports.handler = async (event, context) => {
-    // Only allow POST requests
     if (event.httpMethod !== "POST") {
         return {
             statusCode: 405,
@@ -10,6 +9,14 @@ exports.handler = async (event, context) => {
     }
 
     try {
+        if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+            console.error('Environment variables EMAIL_USER or EMAIL_PASS are missing.');
+            return {
+                statusCode: 500,
+                body: JSON.stringify({ success: false, message: 'Server configuration error: Missing credentials.' }),
+            };
+        }
+
         const { name, email, subject, message } = JSON.parse(event.body);
 
         if (!name || !email || !subject || !message) {
@@ -19,7 +26,6 @@ exports.handler = async (event, context) => {
             };
         }
 
-        // Validate Gmail domain
         if (!email.toLowerCase().endsWith('@gmail.com')) {
             return {
                 statusCode: 400,
@@ -29,11 +35,14 @@ exports.handler = async (event, context) => {
 
         const transporter = nodemailer.createTransport({
             host: process.env.EMAIL_HOST || 'mail.privateemail.com',
-            port: process.env.EMAIL_PORT || 465,
-            secure: true,
+            port: parseInt(process.env.EMAIL_PORT || '465'),
+            secure: (process.env.EMAIL_PORT === '465' || !process.env.EMAIL_PORT),
             auth: {
                 user: process.env.EMAIL_USER,
                 pass: process.env.EMAIL_PASS
+            },
+            tls: {
+                rejectUnauthorized: false // Helps with some SMTP server certificate issues
             }
         });
 
@@ -49,16 +58,18 @@ exports.handler = async (event, context) => {
 
         return {
             statusCode: 200,
-            headers: {
-                "Content-Type": "application/json"
-            },
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ success: true, message: 'Message sent successfully!' }),
         };
     } catch (error) {
-        console.error('Email error:', error);
+        console.error('Detailed Email Error:', error);
         return {
             statusCode: 500,
-            body: JSON.stringify({ success: false, message: 'Failed to send message.' }),
+            body: JSON.stringify({ 
+                success: false, 
+                message: 'Failed to send message.',
+                debug: error.message // Temporarily expose error for debugging
+            }),
         };
     }
 };
