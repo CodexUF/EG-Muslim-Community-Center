@@ -6,10 +6,16 @@ exports.handler = async (event, context) => {
     }
 
     try {
+        const envKeys = Object.keys(process.env);
+        const emailKeys = envKeys.filter(k => k.includes('EMAIL'));
+        
         if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
             return {
                 statusCode: 500,
-                body: JSON.stringify({ success: false, message: 'ERROR: Variables not found in Netlify. Please check Site Configuration > Environment Variables.' })
+                body: JSON.stringify({ 
+                    success: false, 
+                    message: `ERROR: Variables not found. I see ${envKeys.length} total variables. Found these EMAIL keys: [${emailKeys.join(', ')}]. Please ensure Scopes include 'Functions' in Netlify Dashboard.` 
+                })
             };
         }
 
